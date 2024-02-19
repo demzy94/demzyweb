@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majesty Realms</title>
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gilda+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- slick slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- date picker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css" integrity="sha512-YdYyWQf8AS4WSB0WWdc3FbQ3Ypdm0QCWD2k4hgfqbQbRCJBEgX0iAegkl2S1Evma5ImaVXLBeUkIlP6hQ1eYKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/input.css">
+    <link rel="icon" type="image/x-icon" href="/img/icon.png">    
+</head>
+<body> 
+    <!-- header -->
+    <header id="home" class="bg-[url('/img/header-image.png')] bg-black/55 bg-cover bg-center bg-no-repeat min-h-screen flex flex-col overflow-hidden">
+        <!-- <div class="relative bg-[linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))]"></div> -->
+        <!-- <div class="absolute h-screen bg-black"></div> -->
+        <div class="header-top bg-[#222222] min-h-[48px] flex items-center font-barlow py-3">
+            <div class="container max-w-[1200px] mx-auto lg:flex lg:justify-between">
+                <div class="header-top-left flex flex-col items-center sm:flex-row sm:justify-center lg:justify-start">
+                    <div class="flex py-1">
+                        <img src="img/icons/map-marker.svg" alt="" class="w-[10px] mx-2 text-white ">
+                        <span class="text-[#e0e0e0] opacity-60
+                        font-light text-sm">65 Ewet Housing, Uyo
+                        </span>
+                    </div>
+                    <div class="flex py-1 md:ms-5 lg:ms-[7px]">
+                        <img src="/img/icons/call-calling.svg" alt="" class="text-white  w-3 mx-2">
+                        <span class="text-[#e0e0e0] opacity-60 font-light text-sm">+234 7064 110 450</span>
+                    </div>
+                </div>
+                <ul class="flex items-center justify-center py-1">
+                    <li class="w-3 h-3 md:w-4 md:h-4 flex items-center justify-center mx-2">
+                        <a href="#" class="hover:opacity-80 transition 
+                        ease-in-out duration-300"><img src="img/icons/instagram.svg" alt=""></a>
+                    </li>
+                    <li class="w-3 h-3 md:w-4 md:h-4 flex items-center justify-center mx-2">
+                        <a href="#" class="hover:opacity-80 transition 
+                        ease-in-out duration-300"><img src="img/icons/pinterest.svg" alt=""></a>
+                    </li>
+                    <li class="w-3 h-3 md:w-4 md:h-4 flex items-center justify-center mx-2">
+                        <a href="#" class="hover:opacity-80 transition 
+                        ease-in-out duration-300"><img src="img/icons/facebook.svg" alt=""></a>
+                    </li>
+                    <li class="font-medium uppercase text-white ms-2 text-xs 
+                    md:text-sm tracking-widest cursor-pointer">follow us</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- navbar -->
+        <div class="header-main px-3 flex-1 flex">
+            <div class="container max-w-[1200px] mx-auto flex flex-col">
+                <nav class="py-5 md:flex md:justify-between">
+                    <div class="flex justify-between">
+                        <a href="#" class="font-sans text-[28px] font-black text-[#aa8453] uppercase">M<span class="text-white">R</span><span class="text-[#aa8453]">H.</span></a>
+                        <button type="button" class="text-white md:hidden" 
+                        id="navbar-show-btn">
+                            <i class="fas fa-bars text-white text-[1.5em]"></i>
+                        </button>
+                    </div>
+                    <div class="navbar-box fixed top-0 right-0 w-[280px] h-full bg-white p-5 flex flex-col items-center font-barlow-cond transition duration-300 ease-in-out md:relative md:bg-transparent md:translate-x-0  md:flex-row md:h-auto md:w-auto md:p-0 translate-x-full">
+                        <button type="button" class="absolute top-[18px] right-[18px] z-50 text-2xl hover:rotate-180 transition duration-300 ease-in-out md:hidden" id="navbar-hide-btn">
+                         <i class="fa-solid fa-xmark text-[#aa8453]"></i>
+                        </button>
+                        <ul class="flex flex-col w-full text-center mt-[60px] md:flex-row md:mt-0">
+                            <li class="py-3 border-b-[1px] border-solid md:py-0 md:border-none">
+                                <a href="#" class="text-[#aa8453]  uppercase text-md tracking-[.12em] font-  hover:text-[#aa8453] transition duration-300 ease-in-out md:mx-[14px] xl:mx-5 2xl:mx-6 md:text-[#aa8453]">Home</a>
+                            </li>
+                            <li class="py-3 border-b-[1px] border-solid md:py-0 md:border-none">
+                                <a href="#room" class="text-[#222222]  uppercase text-md tracking-[.12em] font-semibold hover:text-[#aa8453]  transition duration-300 ease-in-out md:mx-[14px] xl:mx-5 2xl:mx-6 md:text-white">Rooms</a>
+                            </li>
+                            <li class="py-3 border-b-[1px] border-solid md:py-0 md:border-none">
+                                <a href="#event" class="text-[#222222]  uppercase text-md tracking-[.12em] font-semibold hover:text-[#aa8453]  transition duration-300 ease-in-out md:mx-[14px] xl:mx-5 2xl:mx-6 md:text-white">events</a>
+                            </li>
+                            <li class="py-3 border-b-[1px] border-solid md:py-0 md:border-none">
+                                <a href="#explore" class="text-[#222222] uppercase text-md tracking-[.12em] font-semibold hover:text-[#aa8453]  transition duration-300 ease-in-out md:mx-[14px] xl:mx-5 2xl:mx-6 md:text-white">explore</a>
+                            </li>
+                            <!-- <li class="py-3 border-b-[1px] border-solid md:py-0 md:border-none">
+                                <a href="#" class="text-[#222222] uppercase text-md tracking-[.12em] font-semibold hover:text-[#aa8453]  transition duration-300 ease-in-out md:mx-[14px] xl:mx-5 2xl:mx-6 md:text-white">Gallery</a>
+                            </li> -->
+                            <li class="py-3 border-b-[1px] border-solid md:py-0 md:border-none">
+                                <a href="#contactus" class="text-[#222222]  uppercase text-md tracking-[.12em] font-semibold hover:text-[#aa8453]  transition duration-300 ease-in-out md:mx-[14px] xl:mx-5 2xl:mx-6 md:text-white">Contact</a>
+                            </li>
+                        </ul>
+                        <a href="#blog" class="w-full h-[42px] px-7 uppercase flex items-center justify-center bg-[#aa8453] tracking-widest font-semibold text-white mt-4 hover:bg-[#937248] md:mt-0 md:min-w-[140px] ms-6">know more</a>
+                    </div>  
+                </nav>
+                <div class="flex-1 flex items-center justify-stretch flex-col text-center py-2">
+                    <h1 class="text-xl xs:text-[32px] text-white font-gilda tracking-[.04em] leading-[1.3] uppercase font-normal max-w-[850px] md:text-[42px] xl:text-[50px] xl:leading-[1.3] ">an upcoming vacation gives us something to eagerly anticipate.</h1>
+                    <a href="#" class="min-w-[158px] min-h-[48px] bg-transparent uppercase text-white border-2 font-barlow tracking-widest text-base font-normal inline-flex items-center justify-center mt-9 md:mt-[60px] hover:bg-white hover:text-black transition duration-300 ease-in-out rounded-md">know more</a>
+
+                    <form action="" class="font-barlow mt-16 bg-white w-full grid sm:grid-cols-2 lg:grid-cols-6">
+                        <div class="flex items-center justify-between px-3 py-4 border-[1px] border-solid">
+                            <input data-toggle="datepicker" type= "text" class="placeholder:text-[#222222] placeholder:uppercase text-sm outline-none border-none w-full" placeholder="check in">
+                             <span class="cursor-pointer">
+                                <img src="/img/icons/calendar.svg" 
+                                alt=""></span>
+                        </div>
+                        <div class="flex items-center justify-between px-3 py-4 border-[1px] border-solid">
+                            <input data-toggle="datepicker"  type= "text" class="placeholder:text-[#222222] placeholder:uppercase text-sm outline-none border-none w-full" placeholder="check out"><span class="cursor-pointer"><img src="/img/icons/calendar.svg" alt=""></span>
+                        </div>
+                        <div class="px-2 py-4 border-[1px]">
+                            <select name="" id="" class="min-w-full uppercase text-[#222222] outline-none">
+                                <option disabled selected>Adult</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
+                        <div class="px-2 py-4 border-[1px]">
+                            <select name="" id="" class="min-w-full uppercase text-[#222222] outline-none">
+                                <option disabled selected>Children</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
+                        <div class="px-2 py-4 border-[1px]">
+                            <select name="" id="" class="min-w-full uppercase text-[#222222] outline-none">
+                                <option selected value ="">1 room</option>
+                                <option value="">2 rooms</option>
+                                <option value="">3 rooms</option>
+                            </select>
+                        </div>
+                        <button type="button" class="bg-[#aa8453] font-barlow h-full min-h-[52px] flex items-center justify-center uppercase text-white transition duration-300 ease-in-out hover:bg-[#937248]">Check now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- body  -->
+    <section class="bg-[#202020] min-h-[640px] mx-auto px-3 items-center py-16">
+        <!-- <div class="container max-w-[1200px] mx-auto grid m:grid-cols-2 gap-14 "> -->
+        <div class="container max-w-[1200px] m:grid-cols-2 mx-auto gap-14 grid grid-cols-1 lg:grid-cols-2 ">
+        <!-- <div class="container max-w-[1200px] flex flex-col md:flex-row justify-between gap-3 md:gap-7 px-4 md:px-0  mx-auto mt-10"> -->
+            <div class="flex flex-col justify-center items-start">
+                <h3 class="text-[#80633e] font-normal opacity-70 tracking-[.25em] font-barlow-cond text-xl sm:text-[22px] uppercase">Welcome to
+                </h3>
+                <h1 class="font-gilda text-2xl sm:text-[38px] tracking-[.04em] font-normal py-3 text-white mb-3">Majesty Realms Hotel & Suite</h1>
+                <p class="opacity-60 font-light font-barlow text-justify text-base sm:text-lg text-white">
+                    Majesty Realms Hotel and Suite is located in the middle of Uyo, Akwa Ibom State. 
+                    In recent years, Majesty Realms Hotel and Suite has expanded it infrastructure, 
+                    created attractive opportunities for investors and created new jobs for the region.
+                </p>
+                <a href="#" class="bg-[#aa8453] font-barlow px-4 min-w-[158px] min-h-[48px] inline-flex items-center justify-center uppercase text-white transition duration-300 ease-in-out hover:bg-[#937248] mt-8 tracking-widest">
+                    Know more
+                </a>
+            </div>
+            <div class="welcome-slider overflow-hidden">
+                <div class="h-[425px]">
+                    <img src="/img/welcome1.jpg" alt="welcome image" class="w-full h-full object-cover">
+                </div>
+                <div class="h-[425px]">
+                    <img src="/img/welcome2.jpg" alt="welcome image" class="w-full h-full object-cover">
+                </div>
+                <div class="h-[425px]">
+                    <img src="/img/welcome3.webp" alt="welcome image" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="explore" class="min-h-[600px] py-16 flex flex-col items-center justify-center bg-[url('/img/banner-image.png')] bg-center bg-cover bg-fixed bg-no-repeat px-3">
+        <div class="container max-w-[1200px] mx-auto text-white text-center">
+            <h2 class="font-gilda font-normal text-2xl sm:text-[38px] tracking-[.04em] mb-3">Relax at the bedrooms with Comfy Couches.</h2>
+            <div class="flex items-center justify-center">
+                <img src="/img/decorated-pattern.svg" alt="">
+            </div>
+            <p class="mt-9 tracking-[0.04em] text-lg sm:text-2xl font-barlow font-light max-w-[600px] mx-auto leading-7 sm:leading-9">Everything for an active vacation and luxury experience lover</p>
+            <a href="#" class="bg-[#aa8453] font-barlow px-4 min-w-[158px] min-h-[48px] inline-flex items-center justify-center uppercase text-white transition duration-300 ease-in-out hover:bg-[#937248] mt-8 tracking-widest">explore now</a>
+        </div>
+    </section>
+    <section class="py-16 p-3">
+        <div class="container max-w-[1200px] mx-auto">
+            <h2 class="font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-[#80633e] text-center mb-3">Rooms & Suites</h2>
+            <div class="flex items-center justify-center">
+                <img src="/img/decorated-pattern-2.svg" alt="">
+            </div>
+            <div class="grid gap-10 md:grid-cols-2 py-10">
+                <p class="text-black opacity-60 font-light text-base sm:text-lg font-barlow first-letter:text-4xl first-letter:font-bold first-letter:tracking-[.03em]">Majesty Realms Hotel and Suite is located in the middle of Uyo, Akwa Ibom State. 
+                    In recent years, Majesty Realms Hotel and Suite has expanded it infrastructure, 
+                    created attractive opportunities for investors and created new jobs for the region.</p>
+                    <ul class="bg-[#aa8453] py-5 sm:py-9 px-7">
+                        <li class="grid items-center grid-col-[32px_auto] my-1">
+                            <img src="/img/icons/hotel.svg" alt="">
+                            <span class="text-white font-barlow text-base font-light">The best prices for your relaxing vacation</span>
+                        </li>
+                        <li class="grid items-center grid-col-[32px_auto] my-1">
+                            <img src="/img/icons/hotel.svg" alt="">
+                            <span class="text-white font-barlow text-base font-light">Ultimate place to spend time your loved ones.</span>
+                        </li>
+                        <li class="grid items-center grid-col-[32px_auto] my-1">
+                            <img src="/img/icons/hotel.svg" alt="">
+                            <span class="text-white font-barlow text-base font-light">Cool place to have entertaining time.</span>
+                        </li>
+                    </ul>
+            </div>
+            <div id="book" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-[4px]">
+                <a href="#" class="object-cover relative after:absolute after:contents[''] after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-b from-black/25 to to-black/75 hover:before before:absolute before:contents[''] before:top-3 before:left-3 before:right-3 before:bottom-3 before:border-white before:border-2 before:border-solid before:z-10 before:opacity-0 hover:before:opacity-100 before:transition before:duration-300 before:ease-in-out">
+                    <img src="/img/room-1.png" alt="" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-2/4 -translate-x-2/4 text-white font-medium uppercase text-xl md:text-2xl font-barlow z-10 px-4 mb-10 text-center w-full tracking-widest">Stay Room</div>
+                </a>
+                <a href="#" class="object-cover relative after:absolute after:contents[''] after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-b from-black/25 to to-black/75 hover:before before:absolute before:contents[''] before:top-3 before:left-3 before:right-3 before:bottom-3 before:border-white before:border-2 before:border-solid before:z-10 before:opacity-0 hover:before:opacity-100 before:transition before:duration-300 before:ease-in-out">
+                    <img src="/img/room-2.png" alt="" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-2/4 -translate-x-2/4 text-white font-medium uppercase text-xl md:text-2xl font-barlow z-10 px-4 mb-10 text-center w-full tracking-widest">Conference/Meeting Hall</div>
+                </a>
+                <a href="#" class="object-cover relative after:absolute after:contents[''] after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-b from-black/25 to to-black/75 hover:before before:absolute before:contents[''] before:top-3 before:left-3 before:right-3 before:bottom-3 before:border-white before:border-2 before:border-solid before:z-10 before:opacity-0 hover:before:opacity-100 before:transition before:duration-300 before:ease-in-out">
+                    <img src="/img/room-3.png" alt="" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-2/4 -translate-x-2/4 text-white font-medium uppercase text-xl md:text-2xl font-barlow z-10 px-4 mb-10 text-center w-full tracking-widest">Wedding</div>
+                </a>      
+            </div>
+        </div>
+    </section>
+    <section id="contactus" class="py-16 px-3 bg-[url('/img/booking-image.png')] bg-center bg-cover bg-no-repeat">
+        <div class="container max-w-[1200px] mx-auto">
+            <h2 class="font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-center text-white mb-3">Contact us</h2>
+            <div class="flex items-center justify-center">
+                <img src="/img/decorated-pattern.svg" alt="">
+            </div>
+            <form action="" class="my-16 max-w-[824px] mx-auto">
+                <div class="my-3">
+                    <input type="text" class="outline-none py-4 px-5 bg-transparent caret-white text-white text-lg tracking-[.04em] font-light font-barlow placeholder:text-white border-white border-solid border-b-[1px] w-full " placeholder="Full Name">
+                </div>
+                <div class="my-3">
+                    <textarea id="w3review" name="w3review" rows="2" cols="10" class="outline-none py-4 px-5 bg-transparent caret-white text-white text-lg tracking-[.04em] font-light font-barlow placeholder:text-white border-white border-solid border-b-[1px] w-full " placeholder="Enter your message">   
+                    </textarea>
+                </div>
+
+                <!-- <div class=" grid md:grid-cols-2 md:my-3 md:gap-x-10">
+                    <input type="text" class="outline-none py-4 px-5 bg-transparent caret-white text-white text-lg tracking-[.04em] font-light font-barlow placeholder:text-white border-white border-solid border-b-[1px] w-full " placeholder="Phone Number">
+                    <input type="text" class="outline-none py-4 px-5 bg-transparent caret-white text-white text-lg tracking-[.04em] font-light font-barlow placeholder:text-white border-white border-solid border-b-[1px] w-full " placeholder="Phone Number">
+                </div> -->
+                <!-- <div class="grid md:grid-cols-2 md:my-3 md:gap-x-10">
+                    <input type="text" class="outline-none py-4 px-5 bg-transparent caret-white text-white text-lg tracking-[0.4em] font-light font-barlow placeholder:text-white border-white border-solid border-b-[1px] w-full " placeholder="Purpose of Booking">
+                    <select name="" id="" class="outline-none py-4 px-5 bg-transparent text-white text-lg tracking-[.04em] font-light font-barlow border-white border-solid border-b-[1px] w-full my-3">
+                        <option value="" selected disabled> No. of Adult</option>
+                        <option value="" class="bg-black/30">1</option>
+                        <option value="" class="bg-black/30">2</option>
+                        <option value="" class="bg-black/30">3</option>
+                    </select>
+                </div> -->
+                <div class=" grid md:grid-cols-2 md:my-3 md:gap-x-10">
+                    <input type="date" class="outline-none py-4 px-5 bg-transparent caret-white text-white text-lg tracking-[.04em] font-light font-barlow placeholder:text-white border-white border-solid border-b-[1px] w-full my-3" >
+                    <input type="time" class="outline-none py-4 px-5 bg-transparent caret-white text-white text-lg tracking-[.04em] font-light font-barlow placeholder:text-white border-white border-solid border-b-[1px] w-full my-3" >
+                </div>
+                <div class="flex items-center justify-center">
+                    <a href="#" class="bg-white font-barlow px-4 min-w-[158px] min-h-[48px] inline-flex items-center justify-center uppercase text-[#222222] transition duration-300 ease-in-out hover:bg-[#222222] hover:text-white mt-8 tracking-widest">contact us now</a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section id="event" class="py-16 px-3 bg-white">
+        <div class="container max-w-[1200px] mx-auto ">
+            <h2 class="font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-[#80633e] text-center mb-3">Events</h2>
+            <div class="flex items-center justify-center">
+                <img src="/img/decorated-pattern-2.svg" alt="" >
+            </div>
+            <div class="grid gap-2 md:grid-cols-2 lg:grid-cols-3 mt-10">
+                <div class="min-h-[323px] relative ">
+                    <img src="/img/events-1.png" alt="" class="cursor-pointer w-full h-full object-cover">
+                    <div class="text-white absolute bottom-2 left-2 right-2 bg-black/50 p-5">
+                        <div class="w-[70px] h-[70px] cursor-pointer bg-[#aa8453] rounded-full flex items-center justify-center flex-col uppercase font-mont text-sm absolute top-0 right-3 -translate-y-[50%]" >
+                            <span class="font-bold tracking-widest text-xl inline-block">03</span>
+                            <span class="tracking-widest inline-block -mt-[min-h-\[323px\]]">apr</span>
+                        </div>
+                        <h3 class="font-gilda text-xl tracking-[.04em] uppercase">decade nights</h3>
+                        <p class="font-normal tracking-[.04em] font-barlow text-lg">Saturday Music Fest - <span class="font-light">07:00 PM</span></p>
+                    </div>
+                </div>
+                <div class="min-h-[323px] relative ">
+                    <img src="/img/events-2.png" alt="" class="cursor-pointer w-full h-full object-cover">
+                    <div class="text-white absolute bottom-2 left-2 right-2 bg-black/50 p-5">
+                        <div class="w-[70px] h-[70px] cursor-pointer bg-[#aa8453] rounded-full flex items-center justify-center flex-col uppercase font-mont text-sm absolute top-0 right-3 -translate-y-[50%]" >
+                            <span class="font-bold tracking-widest text-xl inline-block">06</span>
+                            <span class="tracking-widest inline-block -mt-[min-h-\[323px\]]">may</span>
+                        </div>
+                        <h3 class="font-gilda text-xl tracking-[.04em] uppercase">wine tastings</h3>
+                        <p class="font-normal tracking-[.04em] font-barlow text-lg">Special Wine Dinner - <span class="font-light">09:00 PM</span></p>
+                    </div>
+                </div>
+                <div class="min-h-[323px] relative ">
+                    <img src="/img/events-3.png" alt="" class="cursor-pointer w-full h-full object-cover">
+                    <div class="text-white absolute bottom-2 left-2 right-2 bg-black/50 p-5">
+                        <div class="w-[70px] h-[70px] cursor-pointer bg-[#aa8453] rounded-full flex items-center justify-center flex-col uppercase font-mont text-sm absolute top-0 right-3 -translate-y-[50%]" >
+                            <span class="font-bold tracking-widest text-xl inline-block">12</span>
+                            <span class="tracking-widest inline-block -mt-[min-h-\[323px\]]">Jun</span>
+                        </div>
+                        <h3 class="font-gilda text-xl tracking-[.04em] uppercase">love is in the air</h3>
+                        <p class="font-normal tracking-[.04em] font-barlow text-lg">Romantic Couple Nights - <span class="font-light">06:00 PM</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="room" class="py-16 px-3 bg-[#e9e9e9]">
+        <div class="container max-w-[1200px] mx-auto">
+            <h2 class="font-gilda font-normal text-3xl text-[46px] tracking-[.04em] text-[#80633e] text-center mb-3">Room Listing</h2>
+            <div class="flex items-center justify-center">
+                <img src="/img/decorated-pattern-2.svg" alt="">
+            </div>
+            <div class="grid gap-3 sm:grid-cols-2 md:grid-cols-3 mt-10">
+                <div class="group min-h-[260px] relative cursor-pointer after:absolute after:contents-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-transparent-to-t after:from-black/75 after:to-black/5 after:opacity-0 hover:after:opacity-100 after:transition after:duration-300 after:ease-in-out overflow-hidden">
+                    <img src="/img/gallery-1.png" alt="" class="w-full h-full object-cover">
+                    <div class="bg-[#aa8453] text-white py-2 px-2 flex items-center justify-between absolute bottom-3 left-0 w-4/5">
+                    <!-- <div class="bg-[#aa8453] text-white py-2 px-4 flex items-center justify-between absolute bottom-3 left-0 z-10 -translate-x-full group-hover:translate-x-0 transition duration-300 ease-in-out w-4/5"> -->
+                        <span class="font-barlow text-lg font-normal">Standard Room N20,000</span>
+                        <ul class="flex items-center">
+                            <li class="text-sm"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1 "><i class="fa-regular fa-star-half-stroke"></i></li>
+                            <li class="text-sm ms-1 "> <i class="fa-regular fa-star"></i></li>
+                            <li class="text-sm ms-1 "> <i class="fa-regular fa-star"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group min-h-[260px] cursor-pointer relative after:absolute after:contents-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-transparent-to-t after:from-black/75 after:to-black/5 after:opacity-0 hover:after:opacity-100 after:transition after:duration-300 after:ease-in-out overflow-hidden">
+                    <img src="/img/gallery-3.png" alt="" class="w-full h-full object-cover">
+                    <div class="bg-[#aa8453] text-white py-2 px-2 flex items-center justify-between absolute bottom-3 left-0  w-4/5">
+                    <!-- <div class="bg-[#aa8453] text-white py-2 px-4 flex items-center justify-between absolute bottom-3 left-0 z-10 -translate-x-full group-hover:translate-x-0 transition duration-300 ease-in-out w-4/5"> -->
+                        <span class="font-barlow text-lg font-normal">Deluxe Room N30,000</span>
+                        <ul class="flex items-center">
+                            <li class="text-sm"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1 "> <i class="fa-regular fa-star"></i></li>
+                            <li class="text-sm ms-1 "> <i class="fa-regular fa-star"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group min-h-[260px] relative cursor-pointer after:absolute after:contents-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-transparent-to-t after:from-black/75 after:to-black/5 after:opacity-0 hover:after:opacity-100 after:transition after:duration-300 after:ease-in-out overflow-hidden">
+                    <img src="/img/gallery1.webp" alt="" class="w-full h-full object-cover">
+                    <div class="bg-[#aa8453] text-white py-2 px-2 flex items-center justify-between absolute bottom-3 left-0 w-4/5">
+                        <span class="font-barlow text-lg font-normal">Executive Room N40,000</span>
+                        <ul class="flex items-center">
+                            <li class="text-sm"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1 "><i class="fa-regular fa-star-half-stroke"></i></li>
+                            <li class="text-sm ms-1 "> <i class="fa-regular fa-star"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group min-h-[260px] relative cursor-pointer after:absolute after:contents-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-transparent-to-t after:from-black/75 after:to-black/5 after:opacity-0 hover:after:opacity-100 after:transition after:duration-300 after:ease-in-out overflow-hidden">
+                    <img src="/img/gallery-2.png" alt="" class="w-full h-full object-cover">
+                    <div class="bg-[#aa8453] text-white py-2 px-4 flex items-center justify-between absolute bottom-3 left-0 w-4/5">
+                        <span class="font-barlow text-lg font-normal">Master Suite N50,000</span>
+                        <ul class="flex items-center">
+                            <li class="text-sm"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1 "> <i class="fa-regular fa-star"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group min-h-[260px] cursor-pointer relative after:absolute after:contents-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-transparent-to-t after:from-black/75 after:to-black/5 after:opacity-0 hover:after:opacity-100 after:transition after:duration-300 after:ease-in-out overflow-hidden">
+                    <img src="/img/suite.webp" alt="" class="w-full h-full object-cover">
+                    <div class="bg-[#aa8453] text-white py-2 px-2 flex items-center justify-between absolute bottom-3 left-0  w-4/5">
+                        <span class="font-barlow text-lg font-normal">Executive Suite N65,000</span>
+                        <ul class="flex items-center">
+                            <li class="text-sm"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1 "><i class="fa-regular fa-star-half-stroke"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group min-h-[260px] cursor-pointer relative after:absolute after:contents-[''] after:left-0 after:top-0 after:w-full after:h-full after:bg-transparent-to-t after:from-black/75 after:to-black/5 after:opacity-0 hover:after:opacity-100 after:transition after:duration-300 after:ease-in-out overflow-hidden">
+                    <img src="/img/executive.webp" alt="" class="w-full h-full object-cover">
+                    <div class="bg-[#aa8453] text-white py-2 px-2 flex items-center justify-between absolute bottom-3 left-0  w-4/5">
+                        <span class="font-barlow text-lg font-medium">Penthouse Suite N80,000</span>
+                        <ul class="flex items-center">
+                            <li class="text-sm"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1"><i class="fas fa-star"></i></li>
+                            <li class="text-sm ms-1"><i class="fas fa-star"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="blog" class="py-16 px-3 bg-[url('/img/banner-image.png')] bg-center bg-cover bg-fixed bg-no-repeat">
+        <div class="container max-w-[1200px] mx-auto">
+            <h2 class="font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-[#80633e] text-center mb-3">Our Hotel Services</h2>
+            <div class="flex items-center justify-center">
+                <img src="/img/decorated-pattern-2.svg" alt="">
+            </div>
+            <div class="grid gap-3 mt-10 sm:grid-cols-2 md:grid-cols-3">
+                <div class="flex text-center flex-col justify-center items-center bg-black/30 p-10 hover:bg-black/50 transition duration-300 ease-in-out">
+                    <img src="/img/icons/plane.svg" alt="" class="w-[54px]">
+                    <h4 class="mt-4 mb-2 text-[#aa8453] font-gilda text-xl tracking-[.04em] font-normal">Pick Up & Drop</h4>
+                    <p class="text-white text-base font-barlow font-light tracking-[.04em]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt tenetur explicabo nostrum obcaecati, repellat doloremque asperiores necessitatibus architecto cupiditate a temporibus! 
+                        Assumenda accusantium inventore dolore, commodi mollitia voluptas et.</p>
+                </div>
+                <div class="flex text-center flex-col justify-center items-center bg-black/30 p-10 hover:bg-black/50 transition duration-300 ease-in-out">
+                    <img src="/img/icons/vehicle.svg" alt="" class="w-[54px]">
+                    <h4 class="mt-4 mb-2 text-[#aa8453] font-gilda text-xl tracking-[.04em] font-normal">Pick Up & Drop</h4>
+                    <p class="text-white text-base font-barlow font-light tracking-[.04em]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt tenetur explicabo nostrum obcaecati, repellat doloremque asperiores necessitatibus architecto cupiditate a temporibus! 
+                        Assumenda accusantium inventore dolore, commodi mollitia voluptas et.</p>
+                </div>
+                <div class="flex text-center flex-col justify-center items-center bg-black/30 p-10 hover:bg-black/50 transition duration-300 ease-in-out">
+                    <img src="/img/icons/bed.svg" alt="" class="w-[54px]">
+                    <h4 class="mt-4 mb-2 text-[#aa8453] font-gilda text-xl tracking-[.04em] font-normal">Pick Up & Drop</h4>
+                    <p class="text-white text-base font-barlow font-light tracking-[.04em]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt tenetur explicabo nostrum obcaecati, repellat doloremque asperiores necessitatibus architecto cupiditate a temporibus! 
+                        Assumenda accusantium inventore dolore, commodi mollitia voluptas et.</p>
+                </div>
+                <div class="flex text-center flex-col justify-center items-center bg-black/30 p-10 hover:bg-black/50 transition duration-300 ease-in-out">
+                    <img src="/img/icons/pool.svg" alt="" class="w-[54px]">
+                    <h4 class="mt-4 mb-2 text-[#aa8453] font-gilda text-xl tracking-[.04em] font-normal">Pick Up & Drop</h4>
+                    <p class="text-white text-base font-barlow font-light tracking-[.04em]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt tenetur explicabo nostrum obcaecati, repellat doloremque asperiores necessitatibus architecto cupiditate a temporibus! 
+                        Assumenda accusantium inventore dolore, commodi mollitia voluptas et.</p>
+                </div>
+                <div class="flex text-center flex-col justify-center items-center bg-black/30 p-10 hover:bg-black/50 transition duration-300 ease-in-out">
+                    <img src="/img/icons/wifi.svg" alt="" class="w-[54px]">
+                    <h4 class="mt-4 mb-2 text-[#aa8453] font-gilda text-xl tracking-[.04em] font-normal">Pick Up & Drop</h4>
+                    <p class="text-white text-base font-barlow font-light tracking-[.04em]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt tenetur explicabo nostrum obcaecati, repellat doloremque asperiores necessitatibus architecto cupiditate a temporibus! 
+                        Assumenda accusantium inventore dolore, commodi mollitia voluptas et.</p>
+                </div>
+                <div class="flex text-center flex-col justify-center items-center bg-black/30 p-10 hover:bg-black/50 transition duration-300 ease-in-out">
+                    <img src="/img/icons/food.svg" alt="" class="w-[54px]">
+                    <h4 class="mt-4 mb-2 text-[#aa8453] font-gilda text-xl tracking-[.04em] font-normal">Pick Up & Drop</h4>
+                    <p class="text-white text-base font-barlow font-light tracking-[.04em]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sunt tenetur explicabo nostrum obcaecati, repellat doloremque asperiores necessitatibus architecto cupiditate a temporibus! 
+                        Assumenda accusantium inventore dolore, commodi mollitia voluptas et.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="newsblog" class="bg-[#202020] py-10 px-3">
+        <div class="conatiner max-w-['1200px'] mx-auto">
+            <h2 class="font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-center text-white mb-3">Blogs & News</h2>
+            <div class="flex items-center justify-center ">
+                <img src="/img/decorated-pattern.svg" alt="">
+            </div>
+            <div class="grid mt-10 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-10">
+                <a href="" class="transition duration-300 ease-in-out hover:-translate-y-5">
+                    <div class=" min-h-[400px] ">
+                        <img src="/img/blogs-1.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="bg-white text-[#80633e] text-center text-lg sm:text-xl font-gilda font-medium tracking-widest uppercase py-6 px-4">Historic Restaurant Renovation</div>
+                </a>
+                <a href="" class="transition duration-300 ease-in-out hover:-translate-y-5">
+                    <div class="min-h-[400px] ">
+                        <img src="/img/blogs-2.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="bg-white text-[#80633e] text-center text-lg sm:text-xl font-gilda font-medium tracking-widest uppercase py-6 px-4">Historic Restaurant Renovation</div>
+                </a>
+                <a href="" class="transition duration-300 ease-in-out hover:-translate-y-5">
+                    <div class="min-h-[400px] ">
+                        <img src="/img/blogs-3.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="bg-white text-[#80633e] text-center text-lg sm:text-xl font-gilda font-medium tracking-widest uppercase py-6 px-4">Historic Restaurant Renovation</div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31795.87876327535!2d7.908710766657088!3d5.024820478078048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105d57e267cdbe0f%3A0x37e31c3995aa05b9!2sMajesty%20Realm%20Hotel!5e0!3m2!1sen!2sng!4v1708269774697!5m2!1sen!2sng"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="min-h-[480px] w-full "></iframe>
+    </section>
+    <footer>
+        <div class="bg-[#202020] py-16 px-3">
+            <div class="grid max-w-[1200px] mx-auto gap-8 text-center md:grid-cols-2 md:text-start lg:grid-cols-4 sm:grid-cols-2">
+                <div class="md:me-2 lg:me-3">
+                    <a href="#home" class="text-[#aa8453] font-sans text-[28px] font-black text-2xl tracking-[.04em]">M<span class="text-white">R</span><span class="text-[#aa8453]">H.</span></a>
+                    <p class="text-white font-light font-barlow text-base mt-3 max-w-[480px] mx-auto md:ms-0">Welcome to the best five-star 
+                        Deluxe Hotel & Suite in Uyo City.This Hotel and its facilities suite all your purpose ranging from Lodging, cuisine, clubbing, accomadation, event hall, relaxation spot etc we also have some exciting activities, just in the VIP area.
+                    </p>
+                </div>
+                <div>
+                     <h4 class="inline-block font-gilda tracking-[.04em] text-lg text-white capitalize relative after:absolute after:contents-[''] after:left-0 after:-bottom-0 after:h-[1px] after:w-full after:bg-[#80633e] pb-1 mb-4">Quick link</h4>
+                     <ul>
+                        <li class="my-2">
+                            <a href="#blog" class="capitalize font-barlow font-light text-base text-white hover:text-white/50 transition duration-300 ease-in-out">our service</a>
+                        </li>
+                        <li class="my-2">
+                            <a href="#book" class="capitalize font-barlow font-light text-base text-white hover:text-white/50 transition duration-300 ease-in-out">book</a>
+                        </li>
+                        <li class="my-2">
+                            <a href="#ourhotel" class="capitalize font-barlow font-light text-base text-white hover:text-white/50 transition duration-300 ease-in-out">about hotel</a>
+                        </li>
+                        <li class="my-2">
+                            <a href="#newsblog" class="capitalize font-barlow font-light text-base text-white hover:text-white/50 transition duration-300 ease-in-out">blog</a>
+                        </li> 
+                     </ul>
+                </div>
+                <div>
+                    <h4 class="inline-block font-gilda tracking-[.04em] text-lg text-white capitalize relative after:absolute after:contents-[''] after:left-0 after:-bottom-0 after:h-[1px] after:w-full after:bg-[#80633e] pb-1 mb-4">explore</h4>
+                    <ul>
+                       <li class="my-2">
+                           <a href="#room" class="capitalize font-barlow font-light text-base text-white hover:text-white/50 transition duration-300 ease-in-out">rooms & suites</a>
+                       </li>
+                       <li class="my-2">
+                           <a href="#" class="capitalize font-barlow font-light text-base text-white hover:text-white/50 transition duration-300 ease-in-out">spa & wellness</a>
+                       </li>
+                       <li class="my-2">
+                           <a href="#" class="capitalize font-barlow font-light text-base text-white hover:text-white/50 transition duration-300 ease-in-out">special offers</a>
+                       </li>
+                       <li class="my-2">
+                           <a href="#" class="capitalize font-barlow font-light text-base text-white hover:text-white/50 transition duration-300 ease-in-out">restaurant</a>
+                       </li> 
+                    </ul>
+               </div>
+               <div>
+                <h4 class="inline-block font-gilda tracking-[.04em] text-lg text-white capitalize relative after:absolute after:contents-[''] after:left-0 after:-bottom-0 after:h-[1px] after:w-full after:bg-[#80633e] pb-1 mb-4">Contact</h4>
+                <ul>
+                   <li class="my-2 grid grid-cols-[40px_auto] justify-center md:justify-start">
+                    <span class="text-white">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </span>
+                    <span class="text-white/50 font-light">65 Ewet Housing, Uyo
+                    </span>
+                   </li>
+                   <li class="my-2 grid grid-cols-[40px_auto] justify-center md:justify-start">
+                    <span class="text-white">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                    <span class="text-white/50 font-light">234 706 411 0450
+                    </span>
+                   </li>
+                   <li class="my-2 grid grid-cols-[40px_auto] justify-center md:justify-start">
+                    <span class="text-white">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="text-white/50 font-light">info.majestyrealmshotel@gmail.com
+                    </span>
+                   </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <div class="py-4 text-white font-normal font-barlow uppercase text-center tracking-widest bg-[#1e1e1e]">
+            <p class="text-sm">&copy; demzyweb</p>
+        </div>
+    </footer>
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    
+    <!-- date picker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js" integrity="sha512-RCgrAvvoLpP7KVgTkTctrUdv7C6t7Un3p1iaoPr1++3pybCyCsCZZN7QEHMZTcJTmcJ7jzexTO+eFpHk4OCFAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- slick slide js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="jquery-3.2.1.min.js"></script> -->
+    <script src="/src/script.js"></script>
+
+</body>
+</html>

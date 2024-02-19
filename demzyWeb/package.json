@@ -1,0 +1,21 @@
+{
+  "name": "demzyweb",
+  "version": "1.0.0",
+  "description": "class work",
+  "main": "index.js",
+  "scripts": {
+    "test": "tailwindcss -i ./css/input.css -o ./css/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "heart"
+  },
+  "keywords": [
+    "love"
+  ],
+  "author": "Prof. Demzy",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
