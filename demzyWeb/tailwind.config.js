@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["index.html {html,js,php}"],
+  content: ["index.html"],
   theme: {
     extend: {
       colors:{
@@ -22,7 +22,7 @@ module.exports = {
        },
        backgroundImage:{
         'header-image': "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/img/header-image.png')",
-        'banner-image': "linear-gradient(0deg, rgba(16, 16, 16, 0.5), rgba(16, 16, 16, 0.5)), url('/img/banner-image.png')",
+        'banner-image': "linear-gradient(rgba(16, 16, 16, 0.5), rgba(16, 16, 16, 0.5)), url('/img/banner-image.png')",
         'booking-image': "linear-gradient(rgba(16, 16, 16, 0.5), rgba(16, 16, 16, 0.5)), url('/img/booking-image.png')"
        },
       gridTemplateColumns:{

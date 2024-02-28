@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Majesty Realms</title>
     <!-- tailwind cdn -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,12 +21,11 @@
     <!-- date picker -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css" integrity="sha512-YdYyWQf8AS4WSB0WWdc3FbQ3Ypdm0QCWD2k4hgfqbQbRCJBEgX0iAegkl2S1Evma5ImaVXLBeUkIlP6hQ1eYKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/input.css">
     <link rel="icon" type="image/x-icon" href="img/icon.png">    
 </head>
 <body> 
     <!-- header -->
-    <header id="home" class="bg-[url('img/header-image.png')] bg-black/55 bg-cover bg-center bg-no-repeat min-h-screen flex flex-col overflow-hidden">
+    <header id="home" class="bg-header-image bg-black/55 bg-cover bg-center bg-no-repeat min-h-screen flex flex-col overflow-hidden">
         <!-- <div class="relative bg-[linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))]"></div> -->
         <!-- <div class="absolute h-screen bg-black"></div> -->
         <div class="header-top bg-[#222222] min-h-[48px] flex items-center font-barlow py-3">
@@ -109,10 +108,11 @@
                             <input data-toggle="datepicker" type= "text" class="placeholder:text-[#222222] placeholder:uppercase text-sm outline-none border-none w-full" placeholder="check in">
                              <span class="cursor-pointer">
                                 <img src="img/icons/calendar.svg" 
-                                alt=""></span>
+                                alt="">
+                            </span>
                         </div>
                         <div class="flex items-center justify-between px-3 py-4 border-[1px] border-solid">
-                            <input data-toggle="datepicker"  type= "text" class="placeholder:text-[#222222] placeholder:uppercase text-sm outline-none border-none w-full" placeholder="check out"><span class="cursor-pointer"><img src="/img/icons/calendar.svg" alt=""></span>
+                            <input data-toggle="datepicker"  type= "text" class="placeholder:text-[#222222] placeholder:uppercase text-sm outline-none border-none w-full" placeholder="check out"><span class="cursor-pointer"><img src="img/icons/calendar.svg" alt=""></span>
                         </div>
                         <div class="px-2 py-4 border-[1px]">
                             <select name="" id="" class="min-w-full uppercase text-[#222222] outline-none">
@@ -174,7 +174,7 @@
             </div>
         </div>
     </section>
-    <section id="explore" class="min-h-[600px] py-16 flex flex-col items-center justify-center bg-[url('img/banner-image.png')] bg-center bg-cover bg-fixed bg-no-repeat px-3">
+    <section id="explore" class="min-h-[600px] py-16 flex flex-col items-center justify-center bg-banner-image bg-center bg-cover bg-fixed bg-no-repeat px-3">
         <div class="container max-w-[1200px] mx-auto text-white text-center">
             <h2 class="font-gilda font-normal text-2xl sm:text-[38px] tracking-[.04em] mb-3">Relax at the bedrooms with Comfy Couches.</h2>
             <div class="flex items-center justify-center">
@@ -225,7 +225,7 @@
             </div>
         </div>
     </section>
-    <section id="contactus" class="py-16 px-3 bg-[url('img/booking-image.png')] bg-center bg-cover bg-no-repeat">
+    <section id="contactus" class="py-16 px-3 bg-booking-image bg-center bg-cover bg-no-repeat">
         <div class="container max-w-[1200px] mx-auto">
             <h2 class="font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-center text-white mb-3">Contact us</h2>
             <div class="flex items-center justify-center">
@@ -396,7 +396,7 @@
             </div>
         </div>
     </section>
-    <section id="blog" class="py-16 px-3 bg-[url('img/banner-image.png')] bg-center bg-cover bg-fixed bg-no-repeat">
+    <section id="blog" class="py-16 px-3 bg-banner-image bg-center bg-cover bg-fixed bg-no-repeat">
         <div class="container max-w-[1200px] mx-auto">
             <h2 class="font-gilda font-normal text-3xl sm:text-[46px] tracking-[.04em] text-[#80633e] text-center mb-3">Our Hotel Services</h2>
             <div class="flex items-center justify-center">
@@ -548,7 +548,22 @@
             </div>
         </div>
         <div class="py-4 text-white font-normal font-barlow uppercase text-center tracking-widest bg-[#1e1e1e]">
-            <p class="text-sm">&copy; demzyweb</p>
+            <p class="text-sm">&copy; demzyweb <script >
+                var year = new Date();
+                document.write(year.getFullYear());
+                </script>
+                
+                <!-- <script> const now = new Date(); -->
+                <!-- get the current date and time as a string -->
+                <!-- const currentDateTime = now.toLocaleString(); -->
+                <!-- document.write(currentDateTime); -->
+                <!-- </script>  -->
+            </p>
+            <!-- &copy;
+            <span id="copyright">
+                <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+            </span>
+            Company Name -->
         </div>
     </footer>
     <!-- jquery cdn -->
